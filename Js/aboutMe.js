@@ -1,0 +1,60 @@
+import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.1.4/vue.esm-browser.min.js';
+
+const app = createApp({
+    data(){
+        return{
+            link:0,
+            img:'./img/頭貼.png',
+            Merit:[
+                {
+                    imgUrl:'./img/獎狀1.jpg',
+                    alt:'ERP證照'
+                },
+                {
+                    imgUrl:'./img/獎狀2.jpg',
+                    alt:'跨領域專題競賽'
+                },
+                {
+                    imgUrl:'./img/獎狀3.jpg',
+                    alt:'科院專題競賽'
+                },
+                {
+                    imgUrl:'./img/TA.jpg',
+                    alt:'TA證明'
+                }
+           ],
+           skill:[
+            {
+                name:'Html + Css',
+                percent:85
+            },
+            {
+                name:'Tailwind',
+                percent:75
+            },
+            {
+                name:'Bootstrap',
+                percent:75
+            },
+            {
+                name:'Javascript',
+                percent:50
+            },
+            {
+                name:'Jquery',
+                percent:65
+            },
+            {
+                name:'Vue.js',
+                percent:50
+            },
+           ]
+        }
+    },
+    methods:{
+        changeBg(val){
+            this.link=val;
+        },
+    }
+});
+app.mount('#app');
